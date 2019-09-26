@@ -1,0 +1,10 @@
+The Project should...
+
+Input - Earnings per Share (EPS)
+Calculate - Interest EPS in the Past (%)
+Input - Assumption of Future Interest (%)
+Calculate & Output - EPS in 10 Years
+Input - KGV in 10 Years
+Calculate & Output - Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
+Input & Calculate - Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
+Calculate -  Fair Price per Share (Now) = PPS 10 Years / Factor 10 Years
