@@ -24,9 +24,6 @@ while forward_eps == True:
             else:
                 print("Wrong Answer... Try again!")
 
-#Quick Test of Dictionary
-print(eps_past)
-
 #Calculate Interest Earnings per Share (Past to Present)
 x = 0
 y = 1
@@ -41,25 +38,26 @@ while calc_counter > 1:
     y += 1
     calc_counter -= 1
 
-#Quick Test of List
-print(eps_calc)
-
-#Calculate Average Interest per Share
+#Calculate Average Interest per Share in the Past
 x = 0
 y = 1
 calc_counter = input_counter - 1
 
-while calc_counter > 1:
-    av_interest = eps_calc[x] + eps_calc[y]
-    x += 1
-    y += 1
-    calc_counter -= 1
+if calc_counter > 1:
+    while calc_counter > 1:
+        av_interest = eps_calc[x] + eps_calc[y]
+        x += 1
+        y += 1
+        calc_counter -= 1
 
-input_counter -= 1
-av_interest = av_interest / input_counter
+    input_counter -= 1
+    av_interest = av_interest / input_counter
+    av_interest = round(av_interest, 2)
+else:
+    av_interest = round(eps_calc[0], 2)
 
-#Quick Test of Average Interest Output
-print(av_interest)
+#Output Average Interest per Share in the Past
+print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
 
 #Input Assumption of the Future Interest
 
