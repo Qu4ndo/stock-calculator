@@ -3,6 +3,8 @@ from datetime import datetime
 #Input Earnings per Share (Past)
 eps_past = {}
 forward_eps = True
+input_counter = 0
+print("Warning! Input the Data in correct order (Present to Past)")
 
 while forward_eps == True:
     eps_number = input("Input the EPS from a Past Year: ")
@@ -10,23 +12,29 @@ while forward_eps == True:
     update_eps_past = {eps_year:eps_number}
     eps_past.update(update_eps_past)
 
-    while True:
-        add_more_eps = input("Want to input more Past EPS Data? (y/n): ")
+    if input_counter < 1:
+        input_counter += 1
+    else:
+        while True:
+            add_more_eps = input("Want to input more Past EPS Data? (y/n): ")
 
-        if add_more_eps == "n" or add_more_eps == "N":
-            forward_eps = False
-            break
-        elif add_more_eps == "y" or add_more_eps == "Y":
-            forward_eps = True
-            break
-        else:
-            print("Wrong Answer... Try again!")
+            if add_more_eps == "n" or add_more_eps == "N":
+                forward_eps = False
+                break
+            elif add_more_eps == "y" or add_more_eps == "Y":
+                forward_eps = True
+                break
+            else:
+                print("Wrong Answer... Try again!")
 
 #Quick Test of Dictionary
 print(eps_past)
 
-#Calculate Average Interest Earnings per Share (Past to Present)
+#Calculate Average Interest Earnings per Share (Past to Present) and put it into a list
 interest_past = ()
+
+#for i in eps_past:
+
 
 
 
