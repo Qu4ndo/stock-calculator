@@ -1,18 +1,14 @@
-from datetime import datetime
-
 #Input Earnings per Share (Past)
-eps_past = {}
+eps_past = []
 forward_eps = True
-input_counter = 0
-print("Warning! Input the Data in correct order (Present to Past)")
+input_counter = 1
+print("Warning! Input the Data in correct order (Past to Present)!")
 
 while forward_eps == True:
-    eps_number = input("Input the EPS from a Past Year: ")
-    eps_year = input("Input the Year from the EPS: ")
-    update_eps_past = {eps_year:eps_number}
-    eps_past.update(update_eps_past)
+    eps_number = input("Input the EPS from the " + str(input_counter) + " Year: ")
+    eps_past.append(float(eps_number))
 
-    if input_counter < 1:
+    if input_counter < 2:
         input_counter += 1
     else:
         while True:
@@ -23,6 +19,7 @@ while forward_eps == True:
                 break
             elif add_more_eps == "y" or add_more_eps == "Y":
                 forward_eps = True
+                input_counter += 1
                 break
             else:
                 print("Wrong Answer... Try again!")
@@ -30,16 +27,40 @@ while forward_eps == True:
 #Quick Test of Dictionary
 print(eps_past)
 
-#Calculate Average Interest Earnings per Share (Past to Present) and put it into a list
-interest_past = ()
+#Calculate Interest Earnings per Share (Past to Present)
+x = 0
+y = 1
+eps_calc = []
+calc_counter = input_counter
 
-#for i in eps_past:
+while calc_counter > 1:
+    interest = eps_past[y] / eps_past[x]
+    interest = (interest - 1) * 100
+    eps_calc.append(interest)
+    x += 1
+    y += 1
+    calc_counter -= 1
 
+#Quick Test of List
+print(eps_calc)
 
+#Calculate Average Interest per Share
+x = 0
+y = 1
+calc_counter = input_counter - 1
 
+while calc_counter > 1:
+    av_interest = eps_calc[x] + eps_calc[y]
+    x += 1
+    y += 1
+    calc_counter -= 1
 
+input_counter -= 1
+av_interest = av_interest / input_counter
+
+#Quick Test of Average Interest Output
+print(av_interest)
 
 #Input Assumption of the Future Interest
 
 #Calculate EPS in 10 Years
-today = datetime.now().year
