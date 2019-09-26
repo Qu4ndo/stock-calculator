@@ -8,9 +8,16 @@ while forward_eps == True:
     update_eps_past = {eps_year:eps_number}
     eps_past.update(update_eps_past)
 
-    add_more_eps = input("Want to input more Past EPS Data? (y/n): ")
+    while True:
+        add_more_eps = str(input("Want to input more Past EPS Data? (y/n): "))
 
-    if add_more_eps == "no":
-        forward_eps = False
+        if add_more_eps == "n" or add_more_eps == "N":
+            forward_eps = False
+            break
+        elif add_more_eps == "y" or add_more_eps == "Y":
+            forward_eps = True
+            break
+
+
 
 print(eps_past)
