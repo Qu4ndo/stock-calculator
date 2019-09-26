@@ -1,7 +1,7 @@
 The Project should...
 
 Input - Earnings per Share (EPS)
-Calculate - Interest EPS in the Past (%)
+Calculate - Average Interest EPS in the Past (%)
 Input - Assumption of Future Interest (%)
 Calculate - EPS in 10 Years
 Input - KGV in 10 Years
