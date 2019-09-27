@@ -58,7 +58,35 @@ else:
 
 #Output Average Interest per Share in the Past
 print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
-
+print("#####################################################################")
 #Input Assumption of the Future Interest
+interest_future = float(input("Input your Interest Expectation (%) for EPS in the Future: "))
+interest_future = interest_future / 100
+interest_future += 1
+last_eps = float(input("Input your last EPS Data (from the Present): "))
+
 
 #Calculate EPS in 10 Years
+future_counter = 11
+future_eps = last_eps
+
+while future_counter > 0:
+    future_eps = future_eps * interest_future
+    future_counter -= 1
+
+print("Your Future EPS (10 Years) is: " + str(round(future_eps, 2)) + " €/$")
+print("#####################################################################")
+
+#Input KGV in 10 Years
+kgv_future = float(input("Input your KGV Expectation for the Future: "))
+
+#Calculate Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
+pps_future = future_eps * kgv_future
+print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
+print("#####################################################################")
+
+#Calculate Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
+factor = 3.1058482083
+pps_now = pps_future / factor
+
+print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
