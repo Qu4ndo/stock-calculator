@@ -92,11 +92,11 @@ def eps_future(last_eps):
     return future_eps
 
 def price_future(future_eps):
-    #Input KGV in 10 Years
-    kgv_future = float(input("Input your KGV Expectation for the Future: "))
+    #Input P/E-Ratio in 10 Years
+    per_future = float(input("Input your P/E-Ratio Expectation for the Future: "))
 
     #Calculate Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
-    pps_future = future_eps * kgv_future
+    pps_future = future_eps * per_future
     print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
     print("#####################################################################")
 
