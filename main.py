@@ -24,9 +24,10 @@ def input_eps():
                     break
                 else:
                     print("Wrong Answer... Try again!")
+                    
     return eps_past
 
-def calculate_interest(input_counter):
+def calculate_interest(eps_past):
     #Calculate Interest Earnings per Share (Past to Present)
     x = 0
     y = 1
@@ -40,6 +41,7 @@ def calculate_interest(input_counter):
         x += 1
         y += 1
         calc_counter -= 1
+
     return eps_calc
 
 def average_interest(input_counter):
