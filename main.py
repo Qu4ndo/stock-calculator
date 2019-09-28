@@ -90,3 +90,11 @@ factor = 3.1058482083
 pps_now = pps_future / factor
 
 print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
+
+
+
+def main():
+
+
+if __name__ == "__main__":
+    main()
