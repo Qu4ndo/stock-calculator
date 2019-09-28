@@ -1,29 +1,18 @@
 def input_eps():
     #Input Earnings per Share (Past)
     eps_past = []
-    forward_eps = True
-    input_counter = 1
     print("Warning! Input the Data in correct order (Past to Present)!")
+    print("Info: Stop the input with \"n\" or \"N\"!")
+    print("#####################################################################")
 
-    while forward_eps == True:
+    while True:
+        input_counter = len(eps_past) + 1
         eps_number = input("Input the EPS from the " + str(input_counter) + " Year: ")
+
+        if eps_number == "n" or eps_number == "N":
+            break
+
         eps_past.append(float(eps_number))
-
-        if input_counter < 2:
-            input_counter += 1
-        else:
-            while True:
-                add_more_eps = input("Input more Past EPS Data? (y/n): ")
-
-                if add_more_eps == "n" or add_more_eps == "N":
-                    forward_eps = False
-                    break
-                elif add_more_eps == "y" or add_more_eps == "Y":
-                    forward_eps = True
-                    input_counter += 1
-                    break
-                else:
-                    print("Wrong Answer... Try again!")
 
     return eps_past
 
