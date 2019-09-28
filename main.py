@@ -11,8 +11,8 @@ def input_eps():
 
         if eps_number == "n" or eps_number == "N":
             break
-
-        eps_past.append(float(eps_number))
+        else:
+            eps_past.append(float(eps_number))
 
     return eps_past
 
@@ -40,11 +40,7 @@ def average_interest(eps_past, eps_calc):
     calc_counter = len(eps_past) - 1
 
     if calc_counter > 1:
-        while calc_counter > 1:
-            av_interest = eps_calc[x] + eps_calc[y]
-            x += 1
-            y += 1
-            calc_counter -= 1
+        av_interest = sum(eps_calc)
 
         av_interest = av_interest / calc_counter
         av_interest = round(av_interest, 2)
