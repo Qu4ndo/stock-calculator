@@ -75,7 +75,7 @@ def input_assumption():
     interest_future += 1
     last_eps = float(input("Input your last EPS Data (from the Present): "))
 
-
+    return interest_future, last_eps
 
 def eps_future():
     #Calculate EPS in 10 Years
@@ -109,8 +109,10 @@ if __name__ == "__main__":
     eps_past = input_eps()
     eps_calc = calculate_interest(eps_past)
     average_interest(eps_past, eps_calc)
+    interest_future, last_eps = input_assumption()
+    print(interest_future)
+    print(last_eps)
     exit()
-    input_assumption()
     eps_future()
     price_future()
     price_now()
