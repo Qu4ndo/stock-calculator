@@ -11,32 +11,6 @@ Calculate -  Fair Price per Share (Now) = PPS 10 Years / Factor 10 Years
 
 ##############################################################
 
-Inputs:
-
-Earnings per Share (EPS)
-Assumption of Future Interest (%)
-KGV in 10 Years
-Interest per Year (Default = 12%)
-
-################
-
-Calculations:
-
-Interest EPS in the Past (%)
-EPS in 10 Years
-Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
-Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
-Fair Price per Share (Now) = PPS 10 Years / Factor 10 Years
-
-################
-
-Output:
-
-All Data in a txt file
-
-
-################
-
 Possible Features:
 
 Compare Stocks
