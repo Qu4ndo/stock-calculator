@@ -77,7 +77,7 @@ def input_assumption():
 
     return interest_future, last_eps
 
-def eps_future():
+def eps_future(last_eps):
     #Calculate EPS in 10 Years
     future_counter = 11
     future_eps = last_eps
@@ -88,6 +88,8 @@ def eps_future():
 
     print("Your Future EPS (10 Years) is: " + str(round(future_eps, 2)) + " €/$")
     print("#####################################################################")
+
+    return future_eps
 
 def price_future():
     #Input KGV in 10 Years
@@ -110,9 +112,7 @@ if __name__ == "__main__":
     eps_calc = calculate_interest(eps_past)
     average_interest(eps_past, eps_calc)
     interest_future, last_eps = input_assumption()
-    print(interest_future)
-    print(last_eps)
+    eps_future(last_eps)
     exit()
-    eps_future()
     price_future()
     price_now()
