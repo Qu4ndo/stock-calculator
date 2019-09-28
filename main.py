@@ -91,7 +91,7 @@ def eps_future(last_eps):
 
     return future_eps
 
-def price_future():
+def price_future(future_eps):
     #Input KGV in 10 Years
     kgv_future = float(input("Input your KGV Expectation for the Future: "))
 
@@ -99,6 +99,8 @@ def price_future():
     pps_future = future_eps * kgv_future
     print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
     print("#####################################################################")
+
+    return pps_future
 
 def price_now():
     #Calculate Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
@@ -112,7 +114,7 @@ if __name__ == "__main__":
     eps_calc = calculate_interest(eps_past)
     average_interest(eps_past, eps_calc)
     interest_future, last_eps = input_assumption()
-    eps_future(last_eps)
+    future_eps = eps_future(last_eps)
+    pps_future = price_future(future_eps)
     exit()
-    price_future()
     price_now()
