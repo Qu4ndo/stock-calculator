@@ -24,15 +24,14 @@ def input_eps():
                     break
                 else:
                     print("Wrong Answer... Try again!")
-        return eps_past
-        return input_counter
+    return eps_past
 
-def calculate_interest():
+def calculate_interest(input_counter):
     #Calculate Interest Earnings per Share (Past to Present)
     x = 0
     y = 1
     eps_calc = []
-    calc_counter = input_counter
+    calc_counter = len(eps_past)
 
     while calc_counter > 1:
         interest = eps_past[y] / eps_past[x]
@@ -41,8 +40,9 @@ def calculate_interest():
         x += 1
         y += 1
         calc_counter -= 1
+    return eps_calc
 
-def average_interest():
+def average_interest(input_counter):
     #Calculate Average Interest per Share in the Past
     x = 0
     y = 1
@@ -104,8 +104,9 @@ def price_now():
     print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
 
 if __name__ == "__main__":
-    input_eps()
-    calculate_interest(input_counter)
+    eps_past = input_eps()
+    calculate_interest(eps_past)
+    exit()
     average_interest()
     input_assumption()
     eps_future()
