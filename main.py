@@ -13,7 +13,7 @@ def input_eps():
             input_counter += 1
         else:
             while True:
-                add_more_eps = input("Want to input more Past EPS Data? (y/n): ")
+                add_more_eps = input("Input more Past EPS Data? (y/n): ")
 
                 if add_more_eps == "n" or add_more_eps == "N":
                     forward_eps = False
@@ -57,8 +57,7 @@ def average_interest(eps_past, eps_calc):
             y += 1
             calc_counter -= 1
 
-        input_counter -= 1
-        av_interest = av_interest / input_counter
+        av_interest = av_interest / calc_counter
         av_interest = round(av_interest, 2)
     else:
         av_interest = round(eps_calc[0], 2)
