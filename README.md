@@ -1,5 +1,5 @@
 # Stockypy
-A small Python Stock Calculator for a more efficient Stock Picking Experience.
+A small Python Stock Calculator for a more efficient Stock Picking Experience
 
 
 ## Functions
