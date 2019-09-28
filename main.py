@@ -102,12 +102,14 @@ def price_future(future_eps):
 
     return pps_future
 
-def price_now():
+def price_now(pps_future):
     #Calculate Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
     factor = 3.1058482083
     pps_now = pps_future / factor
 
     print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
+
+    return pps_now
 
 if __name__ == "__main__":
     eps_past = input_eps()
@@ -116,5 +118,4 @@ if __name__ == "__main__":
     interest_future, last_eps = input_assumption()
     future_eps = eps_future(last_eps)
     pps_future = price_future(future_eps)
-    exit()
-    price_now()
+    pps_now = price_now(pps_future)
