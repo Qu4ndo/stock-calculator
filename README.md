@@ -28,3 +28,10 @@ Follow the Instruction given in the Terminal.
 
 **Attention:**
 Please don't input any Symbols (like %)!
+
+
+## Future Expansions
+
+  - Output saved in txt File
+  - Comparison of different Stocks
+  - Best- Worst- and Normal Case Output
