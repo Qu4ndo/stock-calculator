@@ -41,7 +41,6 @@ def average_interest(eps_past, eps_calc):
 
     if calc_counter > 1:
         av_interest = sum(eps_calc)
-
         av_interest = av_interest / calc_counter
         av_interest = round(av_interest, 2)
     else:
