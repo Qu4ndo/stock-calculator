@@ -1,12 +1,14 @@
 # Stockypy
 A small Python Stock Calculator for a more efficient Stock Picking Experience
 
+
 ## Usage
 
 Follow the Instruction given in the Terminal.
 
 **Attention:**
 Please don't input any Symbols (like %)!
+
 
 
 ## Functions
@@ -30,7 +32,12 @@ The Calculator has following options:
   - Save Calculation into file
 
 
+
 ## Future Expansions
 
   - Comparison of different Stocks
   - Best- Worst- and Normal Case Output
+
+
+
+## Usecase
