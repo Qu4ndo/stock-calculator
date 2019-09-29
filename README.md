@@ -9,7 +9,7 @@ Follow the Instruction given in the Terminal.
 Please don't input any Symbols (like %)!
 
 
-### Functions
+## Functions
 
 The Calculator has following options:
 
@@ -29,7 +29,7 @@ The Calculator has following options:
   - Fair Price per Share (Present) - with 12% Interest/Year
 
 
-### Future Expansions
+## Future Expansions
 
   - Output saved in txt File
   - Comparison of different Stocks
