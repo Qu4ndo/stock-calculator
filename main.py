@@ -12,6 +12,7 @@ def input_eps():
             eps_past.append(float(eps_number))
 
     len_eps_past = len(eps_past)
+
     return eps_past, len_eps_past
 
 def calculate_interest(eps_past):
