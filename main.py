@@ -14,7 +14,8 @@ def input_eps():
         else:
             eps_past.append(float(eps_number))
 
-    return eps_past
+    len_eps_past = len(eps_past)
+    return eps_past, len_eps_past
 
 def calculate_interest(eps_past):
     #Calculate Interest Earnings per Share (Past to Present)
@@ -48,11 +49,10 @@ def average_interest(eps_past, eps_calc):
 
     #Output Average Interest per Share in the Past
     print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
-    print("#####################################################################")
-
 
 def input_assumption():
     #Input Assumption of the Future Interest
+    print("#####################################################################")
     interest_future = float(input("Input your Interest Expectation (%) for EPS in the Future: "))
     interest_future = interest_future / 100
     interest_future += 1
@@ -95,9 +95,10 @@ def price_now(pps_future):
     return pps_now
 
 if __name__ == "__main__":
-    eps_past = input_eps()
-    eps_calc = calculate_interest(eps_past)
-    average_interest(eps_past, eps_calc)
+    eps_past, len_eps_past = input_eps()
+    if len_eps_past > 1:
+        eps_calc = calculate_interest(eps_past)
+        average_interest(eps_past, eps_calc)
     interest_future, last_eps = input_assumption()
     future_eps = eps_future(last_eps)
     pps_future = price_future(future_eps)
