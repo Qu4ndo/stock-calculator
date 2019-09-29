@@ -41,3 +41,20 @@ The Calculator has following options:
 
 
 ## Usecase
+
+If you are using a Linux machine you can easily make this script executable.
+
+Include following code in the first line of the stocky.py script:
+```
+#!/usr/bin/env python3
+```
+
+Then make the stocky.py script executable with following command in the terminal:
+```
+chmod +x stocky.py
+```
+
+After that you can simply add a shortcut on your desktop or start it with:
+```
+./stock.py
+```
