@@ -83,6 +83,9 @@ def price_now(pps_future):
 
     return pps_now
 
+def output_txt(eps_past, eps_calc, av_interest, interest_future, last_eps, future_eps, pps_future, pps_now):
+    print("Test yes!")
+
 if __name__ == "__main__":
     print("Warning! Input the Data in correct order (Past to Present)!")
     print("Info: Stop the input with \"n\" or \"N\"!")
@@ -102,3 +105,4 @@ if __name__ == "__main__":
     print("#####################################################################")
     pps_now = price_now(pps_future)
     print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
+    output_txt(eps_past, eps_calc, av_interest, interest_future, last_eps, future_eps, pps_future, pps_now)
