@@ -1,9 +1,6 @@
 def input_eps():
     #Input Earnings per Share (Past)
     eps_past = []
-    print("Warning! Input the Data in correct order (Past to Present)!")
-    print("Info: Stop the input with \"n\" or \"N\"!")
-    print("#####################################################################")
 
     while True:
         input_counter = len(eps_past) + 1
@@ -47,12 +44,10 @@ def average_interest(eps_past, eps_calc):
     else:
         av_interest = round(eps_calc[0], 2)
 
-    #Output Average Interest per Share in the Past
-    print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
+    return av_interest
 
 def input_assumption():
     #Input Assumption of the Future Interest
-    print("#####################################################################")
     interest_future = float(input("Input your Interest Expectation (%) for EPS in the Future: "))
     interest_future = interest_future / 100
     interest_future += 1
@@ -69,9 +64,6 @@ def eps_future(last_eps):
         future_eps = future_eps * interest_future
         future_counter -= 1
 
-    print("Your Future EPS (10 Years) is: " + str(round(future_eps, 2)) + " €/$")
-    print("#####################################################################")
-
     return future_eps
 
 def price_future(future_eps):
@@ -80,8 +72,6 @@ def price_future(future_eps):
 
     #Calculate Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
     pps_future = future_eps * per_future
-    print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
-    print("#####################################################################")
 
     return pps_future
 
@@ -90,16 +80,24 @@ def price_now(pps_future):
     factor = 3.1058482083
     pps_now = pps_future / factor
 
-    print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
-
     return pps_now
 
 if __name__ == "__main__":
+    print("Warning! Input the Data in correct order (Past to Present)!")
+    print("Info: Stop the input with \"n\" or \"N\"!")
+    print("#####################################################################")
     eps_past, len_eps_past = input_eps()
     if len_eps_past > 1:
         eps_calc = calculate_interest(eps_past)
-        average_interest(eps_past, eps_calc)
+        av_interest = average_interest(eps_past, eps_calc)
+        print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
+    print("#####################################################################")
     interest_future, last_eps = input_assumption()
     future_eps = eps_future(last_eps)
+    print("Your Future EPS (10 Years) is: " + str(round(future_eps, 2)) + " €/$")
+    print("#####################################################################")
     pps_future = price_future(future_eps)
+    print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
+    print("#####################################################################")
     pps_now = price_now(pps_future)
+    print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
