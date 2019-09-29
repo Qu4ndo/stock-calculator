@@ -50,11 +50,12 @@ def average_interest(eps_past, eps_calc):
 def input_assumption():
     #Input Assumption of the Future Interest
     interest_future = float(input("Input your Interest Expectation (%) for EPS in the Future: "))
+    txt_interest_future = interest_future
     interest_future = interest_future / 100
     interest_future += 1
     last_eps = float(input("Input your last EPS Data (from the Present): "))
 
-    return interest_future, last_eps
+    return interest_future, last_eps, txt_interest_future
 
 def eps_future(last_eps):
     #Calculate EPS in 10 Years
@@ -74,7 +75,7 @@ def price_future(future_eps):
     #Calculate Price per Share in 10 Years = EPS in 10 Years x KGV in 10 Years
     pps_future = future_eps * per_future
 
-    return pps_future
+    return pps_future, per_future
 
 def price_now(pps_future):
     #Calculate Interest per Year (Default = 12%) --> 1,12^10 = Factor 10 Years
@@ -83,8 +84,24 @@ def price_now(pps_future):
 
     return pps_now
 
-def output_txt(eps_past, eps_calc, av_interest, interest_future, last_eps, future_eps, pps_future, pps_now):
-    print("Test yes!")
+def output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now):
+    write_txt = input("Save this to file? (y/n): ")
+    if write_txt == "y" or write_txt == "Y":
+        text_file = open("output.txt", "w")
+        text_file.write("Input: \n\n")
+        text_file.write("Past EPS Data: " + str(eps_past) + "\n\n")
+        text_file.write("Latest EPS Data: " + str(last_eps) + "€/$ \n")
+        text_file.write("Future Interest Expectation (EPS): " + str(round(txt_interest_future, 2)) + "%\n")
+        text_file.write("P/E-Ratio Expectation: " + str(per_future) + "\n")
+        text_file.write("#####################################################################\n\n")
+        text_file.write("Output: \n\n")
+        text_file.write("Interest Past EPS Data (%): " + str(eps_calc) + "\n")
+        text_file.write("Average Interest Past EPS Data: " + str(round(av_interest, 2)) + "%\n\n")
+        text_file.write("Future EPS (10 Years): " + str(round(future_eps, 2)) + " €/$\n")
+        text_file.write("Price per Share (10 Years): " + str(round(pps_future, 2)) + " €/$\n")
+        text_file.write("Fair Price per Share (Present): " + str(round(pps_now, 2)) + " €/$\n")
+        text_file.write("#####################################################################\n")
+        text_file.close()
 
 if __name__ == "__main__":
     print("Warning! Input the Data in correct order (Past to Present)!")
@@ -96,13 +113,14 @@ if __name__ == "__main__":
         av_interest = average_interest(eps_past, eps_calc)
         print("Your Average Interest of this Stock was: " + str(av_interest) + "%")
     print("#####################################################################")
-    interest_future, last_eps = input_assumption()
+    interest_future, last_eps, txt_interest_future = input_assumption()
     future_eps = eps_future(last_eps)
     print("Your Future EPS (10 Years) is: " + str(round(future_eps, 2)) + " €/$")
     print("#####################################################################")
-    pps_future = price_future(future_eps)
+    pps_future, per_future = price_future(future_eps)
     print("Your Price per Share (10 Years) is: " + str(round(pps_future, 2)) + " €/$")
     print("#####################################################################")
     pps_now = price_now(pps_future)
     print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
-    output_txt(eps_past, eps_calc, av_interest, interest_future, last_eps, future_eps, pps_future, pps_now)
+    print("#####################################################################")
+    output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now)
