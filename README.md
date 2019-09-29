@@ -27,10 +27,10 @@ The Calculator has following options:
   - EPS in 10 Years
   - Price per Share (PPS) in 10 Years
   - Fair Price per Share (Present) - with 12% Interest/Year
+  - Save Calculation into file
 
 
 ## Future Expansions
 
-  - Output saved in txt File
   - Comparison of different Stocks
   - Best- Worst- and Normal Case Output
