@@ -33,13 +33,6 @@ The Calculator has following options:
 
 
 
-## Future Expansions
-
-  - Comparison of different Stocks
-  - Best- Worst- and Normal Case Output
-
-
-
 ## Usecase
 
 If you are using a Linux machine you can easily make this script executable.
@@ -58,3 +51,10 @@ After that you can simply add a shortcut on your desktop or start it with:
 ```
 ./stock.py
 ```
+
+
+
+## Future Expansions
+
+  - Comparison of different Stocks
+  - Best- Worst- and Normal Case Output
