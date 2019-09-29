@@ -1,7 +1,7 @@
 # Stockypy
 A small Python Stock Calculator for a more efficient Stock Picking Experience
 
-### ~~Usage~~
+### __Usage__
 
 Follow the Instruction given in the Terminal.
 
@@ -9,7 +9,7 @@ Follow the Instruction given in the Terminal.
 Please don't input any Symbols (like %)!
 
 
-### ~~Functions~~
+### __Functions__
 
 The Calculator has following options:
 
@@ -29,7 +29,7 @@ The Calculator has following options:
   - Fair Price per Share (Present) - with 12% Interest/Year
 
 
-### ~~Future Expansions~~
+### __Future Expansions__
 
   - Output saved in txt File
   - Comparison of different Stocks
