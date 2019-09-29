@@ -57,4 +57,4 @@ After that you can simply add a shortcut on your desktop or start it with:
 ## Future Expansions
 
   - Comparison of different Stocks
-  - Best- Worst- and Normal Case Output
+  - Best- ,Worst- and Normal Case Output
