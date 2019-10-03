@@ -9,6 +9,8 @@ Follow the Instruction given in the Terminal.
 **Attention:**
 Please don't input any Symbols (like %)!
 
+![stockypy](https://user-images.githubusercontent.com/55713049/66148488-510ab700-e611-11e9-930a-57e98cdd72dc.png)
+
 
 
 ## Functions
