@@ -9,7 +9,7 @@ Follow the Instruction given in the Terminal.
 **Attention:**
 Please don't input any Symbols (like %)!
 
-![stockypy](https://user-images.githubusercontent.com/55713049/66148488-510ab700-e611-11e9-930a-57e98cdd72dc.png)
+![stockypy](https://user-images.githubusercontent.com/55713049/66148900-3b49c180-e612-11e9-8309-ae32e84aaf7b.png)
 
 
 
@@ -33,7 +33,7 @@ The Calculator has following options:
   - Fair Price per Share (Present) - with 12% Interest/Year
   - Save Calculation into file
 
-![Screenshot_txt](https://user-images.githubusercontent.com/55713049/66148070-692e0680-e610-11e9-911d-c88c2bb7db3b.png)
+![Screenshot](https://user-images.githubusercontent.com/55713049/66148903-3e44b200-e612-11e9-8236-78cc99ebf0b1.png)
 
 
 
