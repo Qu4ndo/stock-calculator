@@ -31,6 +31,8 @@ The Calculator has following options:
   - Fair Price per Share (Present) - with 12% Interest/Year
   - Save Calculation into file
 
+![Screenshot_txt](https://user-images.githubusercontent.com/55713049/66148070-692e0680-e610-11e9-911d-c88c2bb7db3b.png)
+
 
 
 ## Usecase
