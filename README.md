@@ -9,8 +9,6 @@ Follow the Instruction given in the Terminal.
 **Attention:**
 Please don't input any Symbols (like %)!
 
-![stockypy](https://user-images.githubusercontent.com/55713049/66148900-3b49c180-e612-11e9-8309-ae32e84aaf7b.png)
-
 
 
 ## Functions
@@ -32,8 +30,6 @@ The Calculator has following options:
   - Price per Share (PPS) in 10 Years
   - Fair Price per Share (Present) - with 12% Interest/Year
   - Save Calculation into file
-
-![Screenshot](https://user-images.githubusercontent.com/55713049/66148903-3e44b200-e612-11e9-8236-78cc99ebf0b1.png)
 
 
 
