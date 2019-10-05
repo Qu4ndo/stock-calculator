@@ -91,7 +91,7 @@ def output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, f
         text_file = open(filename, "w")
         text_file.write("Input: \n\n")
         text_file.write("Past EPS Data: " + str(eps_past) + "\n\n")
-        text_file.write("Latest EPS Data: " + str(last_eps) + "€/$ \n")
+        text_file.write("Latest EPS Data: " + str(last_eps) + " €/$ \n")
         text_file.write("Future Interest Expectation (EPS): " + str(round(txt_interest_future, 2)) + "%\n")
         text_file.write("P/E-Ratio Expectation: " + str(per_future) + "\n\n")
         text_file.write("#####################################################################\n\n")
