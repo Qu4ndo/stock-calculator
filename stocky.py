@@ -84,7 +84,7 @@ def price_now(pps_future):
 
     return pps_now
 
-def output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now):
+def output_txt(eps_past, eps_rounded, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now):
     write_txt = input("Save this to file? (y/n): ")
     if write_txt == "y" or write_txt == "Y":
         name = input("Input filename: ")
@@ -98,7 +98,7 @@ def output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, f
         text_file.write("P/E-Ratio Expectation: " + str(per_future) + "\n\n")
         text_file.write("#####################################################################\n\n")
         text_file.write("Output: \n\n")
-        text_file.write("Interest Past EPS Data (%): " + str(eps_calc) + "\n")
+        text_file.write("Interest Past EPS Data (%): " + str(eps_rounded) + "\n")
         text_file.write("Average Interest Past EPS Data: " + str(round(av_interest, 2)) + "%\n\n")
         text_file.write("Future EPS (10 Years): " + str(round(future_eps, 2)) + " €/$\n")
         text_file.write("Price per Share (10 Years): " + str(round(pps_future, 2)) + " €/$\n")
@@ -126,4 +126,7 @@ if __name__ == "__main__":
     pps_now = price_now(pps_future)
     print("Your Fair Price per Share (Present) is: " + str(round(pps_now, 2)) + " €/$")
     print("#####################################################################")
-    output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now)
+    eps_rounded = []
+    for i in eps_calc:
+        eps_rounded.append(round(i, 2))
+    output_txt(eps_past, eps_rounded, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now)
