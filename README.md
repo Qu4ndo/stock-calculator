@@ -1,6 +1,7 @@
 # Stockypy
 A small Python Stock Calculator for a more efficient Stock Picking Experience
 
+![stockypy](https://user-images.githubusercontent.com/55713049/66148900-3b49c180-e612-11e9-8309-ae32e84aaf7b.png)
 
 ## Usage
 
