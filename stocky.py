@@ -87,8 +87,10 @@ def price_now(pps_future):
 def output_txt(eps_past, eps_calc, av_interest, txt_interest_future, last_eps, future_eps, pps_future, pps_now):
     write_txt = input("Save this to file? (y/n): ")
     if write_txt == "y" or write_txt == "Y":
-        filename = input("Input filename: ") + ".txt"
+        name = input("Input filename: ")
+        filename = name + ".txt"
         text_file = open(filename, "w")
+        text_file.write("                ######## " + str(name) + " ########\n\n\n")
         text_file.write("Input: \n\n")
         text_file.write("Past EPS Data: " + str(eps_past) + "\n\n")
         text_file.write("Latest EPS Data: " + str(last_eps) + " €/$ \n")
