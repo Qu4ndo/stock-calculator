@@ -29,7 +29,7 @@ The Calculator has following options:
   - Average Interest from the Past
   - EPS in 10 Years
   - Price per Share (PPS) in 10 Years
-  - Fair Price per Share (Present) - with 12% Interest/Year
+  - Fair Price per Share (Present) - Calculated with 12% Interest/Year
   - Save Calculation into file
 
 
